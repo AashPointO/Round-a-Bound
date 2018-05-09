@@ -248,9 +248,10 @@ class SettingsScene: SKScene {
                 circleToggle!.run(SKAction.rotate(byAngle: -PI*2, duration: timeFrame))
                 
                 icon!.run(sequence)
+                icon!.run(SKAction.setTexture(SKTexture(imageNamed: offName!)))
                 circleToggle!.run(SKAction.moveTo(x: -dx, duration: timeFrame))
                 circleToggle!.fillTexture = SKTexture(imageNamed: "RedGrad.png")
-                
+            
                 circleToggle!.run(pressedAction)
                 state.pointee = false;
                 break;
@@ -259,6 +260,7 @@ class SettingsScene: SKScene {
                 
                 circleToggle!.fillTexture = SKTexture(imageNamed: "GreenGrad.png")
                 icon!.run(sequence)
+                icon!.run(SKAction.setTexture(SKTexture(imageNamed: onName!)))
                 circleToggle!.run(SKAction.moveTo(x: dx, duration: timeFrame))
                 
                 circleToggle!.run(pressedAction)

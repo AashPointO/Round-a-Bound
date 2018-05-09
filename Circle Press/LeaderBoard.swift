@@ -94,7 +94,7 @@ class LeaderBoard: SKScene {
         ReLoad()
         DismissKeyboard()
         
-        var background = SKSpriteNode(imageNamed: "BG.png")
+        let background = SKSpriteNode(imageNamed: "BG.png")
         background.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
         background.size = self.size
         background.zPosition = -5
